@@ -1,6 +1,13 @@
 # Arkon Data
 Proyecto de localización de unidades de Metrobus de CDMX
 
+# Proyecto en GitHub
+https://github.com/pptopt/arkon_data
+
+# Dirección de containers de docker
+Proyecto: https://hub.docker.com/repository/docker/pptopt/geo-server
+BD Postgres: https://hub.docker.com/repository/docker/pptopt/postgres
+
 ## Descripción: 
 
 Desarrollar un pipeline de análisis de datos utilizando los datos abiertos de la Ciudad de México correspondientes a la ubicación de las unidades del metrobús durante la última hora para obtener un histórico de la posición en la que se encuentra cada unidad que pueda ser consultado mediante un API Rest filtrando por unidad o por alcaldía. 
@@ -36,7 +43,7 @@ Desarrollar un pipeline de análisis de datos utilizando los datos abiertos de l
   #### Obtener una lista de unidades que hayan estado dentro de una alcaldía 
     Ejecutar el siguiente llamado al endpoint: http://localhost:8090/puntosDeRecorrido/getByIdAlcaldia/14
 
-##Código 
+## Código 
   ### El candidato tendrá completa libertad de elegir el stack tecnológico 
       Se presenta la solución en Java. Proyecto desarrollado con Spring Boot Tools.
   ### Incluir comentarios en el código 
