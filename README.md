@@ -16,7 +16,7 @@ Desarrollar un pipeline de análisis de datos utilizando los datos abiertos de l
   Ejecutar el siguiente llamado al endpoint: http://localhost:8090/puntosDeRecorrido/getById/11
   Este llamado devuelve el detalle a nivel de registro de cada ubicación de cada unidad en un solo punto de tiempo. Se incluye tambien la alcaldia en la que la ubicación registrada se encuentra. 
 ### Almacenar la información en una base de datos 
-    Se se incluye.
+    Si se incluye.
 ### Diseñar e implementar un API que permita consultar la información almacenada, con las siguientes características: 
   #### Obtener una lista de unidades disponibles
     Ejecutar el siguiente llamado al endpoint: http://localhost:8090/puntosDeRecorrido/getByVehicleCurrentStatus/2
