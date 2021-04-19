@@ -64,7 +64,7 @@ Desarrollar un pipeline de análisis de datos utilizando los datos abiertos de l
   ### Las configuraciones necesarias para desplegar su(s) servicio(s) en kubernetes 
       * No se incluye.
   ### Implementar una parte de su solución usando programación funcional
-      En algunas parte del código se incluiye programación funcional.
+      En algunas parte del código se incluye programación funcional.
   ### Incluir pruebas unitarias
       * No se incluyen pruebas unitarias
   
