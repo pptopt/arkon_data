@@ -39,9 +39,12 @@ Desarrollar un pipeline de análisis de datos utilizando los datos abiertos de l
     
     Se puede usar tambien el siguiente endpoint: http://localhost:8090/alcaldias/getById/3
     Para consultar con mas detalle por cada id de alcaldia.
+    Este endpoint podria ser accesible solamente a usuarios registrados y el listado completo podria ser de acceso publico.
   
   #### Obtener una lista de unidades que hayan estado dentro de una alcaldía 
     Ejecutar el siguiente llamado al endpoint: http://localhost:8090/puntosDeRecorrido/getByIdAlcaldia/14
+    El parametro indica el numero de alcaldia.
+    Se puede hacer una consulta al endpoint http://localhost:8090/alcaldias/listAll para obtener el catalogo de alcaldias. 
 
 ## Código 
   ### El candidato tendrá completa libertad de elegir el stack tecnológico 
@@ -61,7 +64,7 @@ Desarrollar un pipeline de análisis de datos utilizando los datos abiertos de l
   ### Las configuraciones necesarias para desplegar su(s) servicio(s) en kubernetes 
       * No se incluye.
   ### Implementar una parte de su solución usando programación funcional
-      En algunas parte del código se incluiye programció funcional.
+      En algunas parte del código se incluiye programación funcional.
   ### Incluir pruebas unitarias
       * No se incluyen pruebas unitarias
   
