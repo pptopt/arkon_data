@@ -1,0 +1,75 @@
+docker exec -it postgres13-server psql -U postgres
+
+create database db_arkon_data;
+
+create user usr_arkon_data with password 'pwd_arkon_data';
+
+grant all privileges on database db_arkon_data to usr_arkon_data;
+
+ create table bt_alcaldia (
+ id_alcaldia int not null,
+  des_alcaldia varchar(25) not null,
+  des_geo_shape varchar(33000) not null,
+  des_geo_point varchar(30) not null
+ );
+ 
+ 
+create table bt_recorrido (
+id_recorrido int not null,
+date_updated timestamp not null,
+vehicle_id smallint not null,
+vehicle_label smallint not null,	
+vehicle_current_status smallint not null,
+position_latitude double precision not null,
+position_longitude double precision not null,
+geographic_point varchar(30) not null,	
+position_speed smallint not null,
+position_odometer int not null,
+trip_schedule_relationship smallint not null,
+trip_id int,
+trip_start_date int,
+trip_route_id smallint,
+id_alcaldia int not null,
+des_alcaldia varchar(30)
+);
+
+
+UPDATE bt_alcaldia SET des_geo_shape_sanit = replace(des_geo_shape, '{', '');
+UPDATE bt_alcaldia SET des_geo_shape_sanit = replace(des_geo_shape_sanit, '}', '');
+UPDATE bt_alcaldia SET des_geo_shape_sanit = replace(des_geo_shape_sanit, '"', '');
+UPDATE bt_alcaldia SET des_geo_shape_sanit = replace(des_geo_shape_sanit, ':', '');
+UPDATE bt_alcaldia SET des_geo_shape_sanit = replace(des_geo_shape_sanit, 'type', '');
+UPDATE bt_alcaldia SET des_geo_shape_sanit = replace(des_geo_shape_sanit, 'Polygon', '');
+UPDATE bt_alcaldia SET des_geo_shape_sanit = replace(des_geo_shape_sanit, 'coordinates', '');
+UPDATE bt_alcaldia SET des_geo_shape_sanit = replace(des_geo_shape_sanit, '[[', '');
+UPDATE bt_alcaldia SET des_geo_shape_sanit = replace(des_geo_shape_sanit, '[[', '');
+UPDATE bt_alcaldia SET des_geo_shape_sanit = replace(des_geo_shape_sanit, '[[', '');
+UPDATE bt_alcaldia SET des_geo_shape_sanit = replace(des_geo_shape_sanit, '[[', '');
+UPDATE bt_alcaldia SET des_geo_shape_sanit = replace(des_geo_shape_sanit, '[[', '');
+UPDATE bt_alcaldia SET des_geo_shape_sanit = replace(des_geo_shape_sanit, ']]', '');
+UPDATE bt_alcaldia SET des_geo_shape_sanit = replace(des_geo_shape_sanit, ']]', '');
+UPDATE bt_alcaldia SET des_geo_shape_sanit = replace(des_geo_shape_sanit, ']]', '');
+UPDATE bt_alcaldia SET des_geo_shape_sanit = replace(des_geo_shape_sanit, ']]', '');
+UPDATE bt_alcaldia SET des_geo_shape_sanit = replace(des_geo_shape_sanit, ']]', '');
+UPDATE bt_alcaldia SET des_geo_shape_sanit = replace(des_geo_shape_sanit, ' [', '[');
+UPDATE bt_alcaldia SET des_geo_shape_sanit = replace(des_geo_shape_sanit, ' ', '');
+UPDATE bt_alcaldia SET des_geo_shape_sanit = replace(des_geo_shape_sanit, ' ,', '');
+UPDATE bt_alcaldia SET des_geo_shape = des_geo_shape_sanit;
+select des_geo_shape_sanit from bt_alcaldia;
+
+
+
+UPDATE bt_recorrido SET geographic_point_sanit = replace(geographic_point, '{', '');
+UPDATE bt_recorrido SET geographic_point_sanit = replace(geographic_point_sanit, '}', '');
+UPDATE bt_recorrido SET geographic_point_sanit = replace(geographic_point_sanit, '"', '');
+UPDATE bt_recorrido SET geographic_point_sanit = replace(geographic_point_sanit, ':', '');
+UPDATE bt_recorrido SET geographic_point_sanit = replace(geographic_point_sanit, '[[', '');
+UPDATE bt_recorrido SET geographic_point_sanit = replace(geographic_point_sanit, ']]', '');
+UPDATE bt_recorrido SET geographic_point_sanit = replace(geographic_point_sanit, ' [', '[');
+UPDATE bt_recorrido SET geographic_point_sanit = replace(geographic_point_sanit, ' ', '');
+UPDATE bt_recorrido SET geographic_point_sanit = replace(geographic_point_sanit, ' ,', '');
+UPDATE bt_recorrido SET geographic_point = geographic_point_sanit;
+select geographic_point_sanit from bt_recorrido;
+
+
+select id_alcaldia, count(id_alcaldia) from bt_recorrido group by id_alcaldia;
