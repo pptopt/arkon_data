@@ -12,8 +12,9 @@ Desarrollar un pipeline de análisis de datos utilizando los datos abiertos de l
 ### Obtener la alcaldía correspondiente a cada posición 
 ### Almacenar la información en una base de datos 
 ### Diseñar e implementar un API que permita consultar la información almacenada, con las siguientes características: 
-  #### Obtener una lista de unidades disponibles 
-  #### Consultar los el historial de ubicaciones/fechas de una unidad dado su ID ○ Obtener una lista de alcaldías disponibles 
+  #### Obtener una lista de unidades disponibles
+  #### Consultar los el historial de ubicaciones/fechas de una unidad dado su ID 
+  #### Obtener una lista de alcaldías disponibles 
   #### Obtener una lista de unidades que hayan estado dentro de una alcaldía 
 
 
@@ -25,7 +26,9 @@ Desarrollar un pipeline de análisis de datos utilizando los datos abiertos de l
   ### Manejar control de versiones
       Se mantienen en este repositorio las versiones del proyecto.
   ### Utilizar docker para empaquetar su(s) servicio(s) 
-      Dirección del container: 
+      Dirección de containers
+      Proyecto: https://hub.docker.com/repository/docker/pptopt/geo-server
+      BD Postgres: https://hub.docker.com/repository/docker/pptopt/postgres
 
 #Puntos extra 
   ### Implementar el API usando GraphQL 
