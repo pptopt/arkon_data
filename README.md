@@ -15,7 +15,8 @@ Desarrollar un pipeline de análisis de datos utilizando los datos abiertos de l
 ## Requerimientos y reglas de negocio 
 
 ### Presentar un diagrama con el diseño de su solución
-    No se han incluido diagramas en esta version 0.1
+    Diagrama de Secuencia del Proceso de Actualización de nuevas posiciones del Metrobus CD MX
+    https://www.websequencediagrams.com/files/render?link=h6uEOAyuqPbHnDXMajN8KmmK2YtJPSXTCiBMtqx0evQ6V8WvWW9JjpbuVSxn7YxW
 ### Consultar periódicamente la fuente de datos 
     Ejecutar el siguiente llamado al endpoint: http://localhost:8090/puntosDeRecorrido/updateProcess
     Este proceso ejecuta una actualización de la BD con la información más reciente de las ubicaciones de las unidades en la fuente original que se encuentra en http://app.citi-mb.mx/GTFS-RT/vehiculosPosicion. Esta ruta se encuentra configurada bajo la propiedad archivo.metrobus.rutaOrigen en el archivo application.properties del proyecto. 
