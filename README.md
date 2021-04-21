@@ -15,7 +15,7 @@ Desarrollar un pipeline de análisis de datos utilizando los datos abiertos de l
 ## Requerimientos y reglas de negocio 
 
 ### Presentar un diagrama con el diseño de su solución
-    #### Diagrama de Secuencia del Proceso de Actualización de nuevas posiciones del Metrobus CD MX
+    ### Diagrama de Secuencia del Proceso de Actualización de nuevas posiciones del Metrobus CD MX
     https://www.websequencediagrams.com/files/render?link=h6uEOAyuqPbHnDXMajN8KmmK2YtJPSXTCiBMtqx0evQ6V8WvWW9JjpbuVSxn7YxW
 ### Consultar periódicamente la fuente de datos 
     Ejecutar el siguiente llamado al endpoint: http://localhost:8090/puntosDeRecorrido/updateProcess
